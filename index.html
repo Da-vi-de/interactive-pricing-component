@@ -5,35 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
   
   <title>Frontend Mentor | Interactive pricing component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
+        <!--Show browser width for responsive design-->
+  <!--<span id="width" class="width-container"></span>-->
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        <!--Header-->
+  <header class="header-container content-position">
+      <h1 class="header">Simple, traffic-based pricing</h1>
+      <p class="header-sub">Sign-up for our 30-day trial. No credit card required.</p>
+  </header> 
+
+  <div class="top-bottom-space"></div>
+
+        <!--Card-->
+    <div class="card content-position">
+      <div class="card-content">
+        <div class="view-price">
+          <h3 class="pageviews page-views">100K PAGEVIEWS</h3>
+          <div class="slidercontainer">
+            <input type="range" min="0" max="100" value="50" step="25">
+          </div>
+          <h3 class="pageviews"><span class="price change-price">$16.00</span> /month</h3>
+        </div>
+
+        <div class="billing-choice">
+          <p class="billing">Monthly Billing</p>
+            <label class=" billing-switch">
+              <input type="checkbox" class="toggle">
+              <span class="switch round"></span>
+            </label>
+          <p class="billing">Yearly Billing <span class="discount-percentage"> -25%
+            <span class="discount-percentage discount">discount</span></span>
+          </p>
+        </div>
+
+        <div  class="line"></div>
+      
+    <div class="card-footer"> 
+        <ul class="check-icon">
+          <li>Unlimited websites</li>
+          <li>100% data ownership</li>
+          <li>Email reports</li>
+        </ul>
+        <button class="btn-trial btn-order">Start my trial</button>
+    </div>
+   </div>
   </div>
+
+  <footer class="footer">
+    Challenge by <a class="attribution" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor </a>.
+    Coded by <a class="attribution" href="https://github.com/Da-vi-de/interactive-pricing-component">Davide</a>.
+  </footer>
 </body>
 </html>
+
+
+  
