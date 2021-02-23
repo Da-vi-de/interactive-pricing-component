@@ -16,7 +16,7 @@
   
   }
 
-@media (min-width: 375px) {
+
 
 body {
     margin: 0;
@@ -99,7 +99,8 @@ body {
 
 h1 {
   font-size: 1rem;
-  color: var(--dark-blue); 
+  color: var(--dark-blue);
+  text-align: center; 
 }
 
 h3 {
@@ -111,7 +112,7 @@ h3 {
     font-weight: 600;
     font-size: 0.85rem;
     color:  var(--grayish-blue);
-    padding: 0 0 1em 1em;
+    padding: 0 1em 0 1em;
     align-items: center;
     text-align: center;
 }
@@ -300,7 +301,6 @@ cursor: pointer;
     outline: none;
   }
 
-}
 
 @media (min-width: 500px) {
 
@@ -325,6 +325,7 @@ cursor: pointer;
      font-size: 0.75rem;
      padding: 0 60px;
    }
+  
 
   /* =====================================
        Slider, Switch button, Button
@@ -337,6 +338,14 @@ cursor: pointer;
 
 
 @media (min-width: 650px) {
+
+   /* =================
+       Typography
+   ================= */
+
+   h1 {
+    padding-right: 50px;
+   }
 
    /* =================
         Layout
@@ -414,17 +423,23 @@ cursor: pointer;
 
   body {
     background-size: contain;
+    height:100vh;
+    width:100vw;
   }
 
   .content-position {
     width: 50%;
   }
 
+  .header-container {
+    height: 15vh;
+  }
+
  /* =================
        Typography
  ================= */
 h1 {
-  margin-left: 25px;
+  margin-right: 18px;
 }
  
 }
@@ -437,16 +452,7 @@ h1 {
 
   .content-position {
     width: 40%;
-}
-
-  
-/* =================
-       Typography
- ================= */
-
-h1 {
-  margin-left: 30px;
-}
+ }
 }
 
 @media (min-width: 1400px) {
@@ -464,7 +470,7 @@ h1 {
   
   h1 {
     font-size: 1.5rem;
-    margin-left: 80px;
+    margin-left: 10px;
   }
   }
 
