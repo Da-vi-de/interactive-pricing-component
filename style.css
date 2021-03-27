@@ -1,0 +1,492 @@
+* {box-sizing: border-box;}
+
+:root {
+    --soft-cyan: hsl(174, 76%, 80%);
+    --strong-cyan: hsl(174, 86%, 45%);
+    --cyan-hover: hsl(174, 73%, 70%);
+    --light-grayish-red: hsl(14, 92%, 95%);
+    --light-red: hsl(15, 100%, 70%);
+    --pale-blue: hsl(226, 100%, 87%);
+    --white: hsl(0, 0%, 100%);
+    --very-pale-blue: hsl(230, 100%, 99%);
+    --light-grayish-blue: hsl(226, 68%, 95%);
+    --light-grayish-blue-toggle: hsl(223, 48%, 87%);
+    --grayish-blue: hsl(225, 20%, 60%);
+    --dark-blue: hsl(227, 35%, 25%);
+  
+  }
+
+
+
+body {
+    margin: 0;
+    padding-top: 20px;
+    font-family: 'Manrope', sans-serif;
+    background-image: url('images/bg-pattern.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* =================
+         Layout
+   ================= */
+
+.header-container {
+    background-image: url('images/pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding-bottom: 10px;
+}
+
+.content-position {
+    margin: 0 auto;
+    align-items: center;
+    width: 60%;
+}
+
+.top-bottom-space {
+    padding-bottom: 30px;
+}
+
+.card {
+    width: 80%;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    align-content: center;   
+}
+
+.card:hover {
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.2);
+  } 
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.billing-choice {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+
+.line {
+  border-bottom: 0.1px solid  var( --light-grayish-blue-toggle);
+  padding-top: 10px;
+}
+
+.card-footer {
+  padding: 10px 0;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* =================
+      Typography
+   ================= */
+
+h1 {
+  font-size: 1rem;
+  color: var(--dark-blue);
+  text-align: center; 
+}
+
+h3 {
+    font-weight: 600;
+    color:  var(--grayish-blue);
+}
+
+.header-sub {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color:  var(--grayish-blue);
+    padding: 0 1em 0 1em;
+    align-items: center;
+    text-align: center;
+}
+
+.price {
+    font-weight: 800;
+    color: var(--dark-blue);
+    font-size: 2rem;
+}
+
+.pageviews {
+    padding-left: 60px;
+    padding-bottom: 10px; 
+    font-size: 0.80rem;
+    
+}
+
+.billing {
+    font-size: 0.72rem;
+    color:  var(--grayish-blue);
+    padding: 0 10px;
+}
+
+.discount-percentage {
+  font-size: 0.65rem;
+  padding: 0.2em 0.3em;
+  color: var(--light-red);
+  background-color: var(--light-grayish-red);
+  border-radius: 15px;
+}
+
+.discount {
+  display: none;
+}
+
+.check-icon {
+  list-style: url(images/icon-check.svg);
+  list-style-position: inside;
+  font-size: 0.72rem;
+  text-align: center;
+  padding: 0 10px 10px 0;
+}
+
+.check-icon li {
+  color: var(--grayish-blue);
+  padding-bottom: 7px;
+}
+
+.attribution {
+  font-size: 0.80rem;
+  text-decoration: none;
+  color: var(--dark-blue);
+}
+
+.attribution:hover, .attribution:focus, 
+.attribution:active  {
+  color: var(--pale-blue);
+}
+
+
+
+/* =====================================
+       Slider, Switch, Button
+   ===================================== */
+   
+.slidercontainer {
+    width: 100%;
+}
+
+input[type="range"] {
+-webkit-appearance: none;
+appearance: none;
+width: 100%;
+height: 7px;
+border-radius: 5px;  
+background: linear-gradient(90deg, rgb(165, 243, 235) 0 50%,
+rgb(234, 238, 251) 0 100%);
+outline: none;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 32px;
+height: 30px;
+border-radius: 50%; 
+background: url('images/icon-slider.svg');
+box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+background-color: var(--strong-cyan);
+background-size: 25px;
+background-position: center;
+background-repeat: no-repeat;
+cursor: pointer;
+}
+
+
+input[type="range"]::-moz-range-thumb {
+width: 25px;
+height: 18px;
+border-radius: 50%;
+box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+background: url('images/icon-slider.svg');
+background-color: var(--strong-cyan);
+background-size: 25px;
+background-repeat: no-repeat;
+cursor: pointer;
+}
+
+.billing-switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 20px;
+  padding-left: 28px;
+}
+
+.billing-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var( --light-grayish-blue-toggle);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .switch:before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    left: 2px;
+    
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .switch {
+    background-color: var(--strong-cyan); 
+  }
+  
+  input:focus + .switch {
+    box-shadow: 0 0 1px var(--strong-cyan);
+    
+  }
+  
+  input:checked + .switch:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+  }
+  
+  .switch.round {
+    border-radius: 34px;
+  }
+  
+  .switch.round:before {
+    border-radius: 50%;
+  }
+
+  .btn-trial {
+    margin-left: 40px;
+    padding: 12px 40px;
+    font-weight: 600;
+    font-size: 0.72rem;
+    cursor: pointer;
+    background-color: var(--dark-blue);
+    color: var(--pale-blue);
+    border-radius: 20px;
+    border: none;
+
+  }
+
+  .btn-trial:focus {
+    outline: none;
+  }
+
+
+@media (min-width: 500px) {
+
+  /* =================
+        Layout
+  ================= */
+
+  .content-position {
+    width: 70%;
+}
+
+  /* =================
+       Typography
+   ================= */
+
+   h1 {
+    padding-left: 35px;
+    font-size: 1.2rem;
+   }
+
+   .header-sub {
+     font-size: 0.75rem;
+     padding: 0 60px;
+   }
+  
+
+  /* =====================================
+       Slider, Switch button, Button
+  ===================================== */
+
+  .btn-trial {
+    margin-left: 60px;
+  }
+}
+
+
+@media (min-width: 650px) {
+
+   /* =================
+       Typography
+   ================= */
+
+   h1 {
+    padding-right: 50px;
+   }
+
+   /* =================
+        Layout
+  ================= */
+
+  .view-price {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .billing-choice {
+    margin: 20px 0;
+  }
+  
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+    /* =================
+       Typography
+   ================= */
+
+   h1 {
+    font-size: 1.5rem;
+    padding-left: 60px;
+   }
+
+   .header-sub {
+     font-size: 0.80rem;
+   }
+
+  h3 {
+    order: 1;
+  }
+
+  .pageviews {
+    padding-left: 30px;
+  }
+
+  .check-icon {
+    text-align: left;
+  }
+
+.billing-choice {
+  display: flex;
+  justify-content: flex-end;
+}
+
+  .discount {
+    display: inline; 
+  }
+
+   /* =====================================
+       Slider, Switch button, Button
+   ===================================== */
+   .slidercontainer {
+     order: 2;
+     display: block;
+   }
+
+   .billing-switch {
+     width: 40px;
+   }
+}
+
+@media (min-width: 979px) {
+
+  /* =================
+        Layout
+  ================= */
+
+  body {
+    background-size: contain;
+    height:100vh;
+    width:100vw;
+  }
+
+  .content-position {
+    width: 50%;
+  }
+
+  .header-container {
+    height: 15vh;
+  }
+
+ /* =================
+       Typography
+ ================= */
+h1 {
+  margin-right: 18px;
+}
+ 
+}
+
+@media (min-width: 1200px) {
+
+  /* =================
+        Layout
+  ================= */
+
+  .content-position {
+    width: 40%;
+ }
+}
+
+@media (min-width: 1400px) {
+    /* =================
+        Layout
+  ================= */
+
+  .content-position {
+    margin-top: 80px;
+  }
+   
+  /* =================
+         Typography
+   ================= */
+  
+  h1 {
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
+  }
+
+/* Browser width display for responsive design
+
+.width-container {
+  display: none;
+}
+
+.display-width {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #E6E6E6;
+  padding: .3em;
+  font-size: .85em;
+} */
+
