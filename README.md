@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- [View live page here](https://your-live-site-url.com)
+- [View live page here](https://interactive-pricing-component-git-master-da-vi-de.vercel.app/)
 
 ### Built with
 
@@ -58,4 +58,4 @@ Definetely i need to practice more responsive web design.
 
 ## Acknowledgments
 
-Thanks to [W3schools(https://www.w3schools.com/)] for the slider range bar and the switch checkbox.
+Thanks to [W3schools](https://www.w3schools.com/) for the slider range bar and the switch checkbox.
